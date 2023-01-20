@@ -1,0 +1,224 @@
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/bg.png);
+    background-position: center;
+    background-attachment: fixed;
+    &__content {
+        width: 100%;
+    }
+    &__text h1{
+        font-size: 36px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    &__cart {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1120px;
+        margin: 0 auto;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    &__box {
+        margin-top: 24px;
+        width: 320px;
+        overflow: hidden;
+        padding-bottom: 1px;
+        &-cart {
+            cursor: pointer;
+            &:hover .main__box-title_corner {
+                background: linear-gradient(-45deg,#F2F2F2,#F2F2F2 28px,#2EA8E6 0,#2EA8E6 32px,transparent 0);
+            }
+            &:hover .main__box-title_txt, &:hover .main__box-content {
+                border-color:#2EA8E6;
+            }
+            &:hover .main__box-content_circle {
+                background: #2EA8E6;
+            }
+        }
+        &-title {
+            display: flex;
+            &_corner {
+                width: 43px;
+                height: 44px;
+                background: linear-gradient(-45deg,#F2F2F2,#F2F2F2 28px,#1698D9 0,#1698D9 32px,transparent 0);
+            }
+            &_txt {
+                padding-top: 21px;
+                background: #F2F2F2;
+                border: 4px solid #1698D9;
+                border-left: none;
+                border-bottom: none;
+                border-radius: 0 12px 0 0;
+                -webkit-border-radius: 0 12px 0 0;
+                -moz-border-radius: 0 12px 0 0;
+                -ms-border-radius: 0 12px 0 0;
+                -o-border-radius: 0 12px 0 0;
+                width: 277px;
+                padding-left: 8px;
+                font-family: 'Trebuchet MS';
+                color: #666666;
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+        &-content {
+            height: 436px;
+            background: #F2F2F2;
+            padding-left: 47px;
+            border: 4px solid #1698D9;
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            -webkit-border-radius: 0 0 12px 12px;
+            -moz-border-radius: 0 0 12px 12px;
+            -ms-border-radius: 0 0 12px 12px;
+            -o-border-radius: 0 0 12px 12px;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+            &_name {
+                color: #000000;
+                font-family: 'Trebuchet MS';
+                font-weight: 700;
+                font-size: 48px;
+            }
+            &_discription {
+                font-family: 'Trebuchet MS';
+                font-weight: 700;
+                font-size: 24px;
+            }
+            &_gift {
+                font-family: 'Trebuchet MS';
+                margin-top: 15px;
+                font-weight: 700;
+                font-size: 14px;
+                color: #666666;
+                width: 127px;
+            }
+            &_cat {
+                width: 320px;
+                height: 272px;
+                margin-top: 18px;
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                z-index: 0;
+                background-image: url(../img/cat.png);
+                pointer-events: none;
+                
+            }
+            &_circle {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background: #1698D9;
+                position: absolute;
+                bottom: 16px;
+                right: 16px;
+                line-height: 28px;
+                padding-top: 8px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                & h2 {
+                    font-family: 'Trebuchet MS';
+                    color: #FFFFFF;
+                    font-weight: 400;
+                    font-size: 42px;
+                }
+                & h3 {
+                    font-family: 'Trebuchet MS';
+                    color: #FFFFFF;
+                    font-weight: 400;
+                    font-size: 22px;
+                }
+            }
+        }
+        &-subtitle, &-subtitle_active {
+            font-family: 'Trebuchet MS';
+            font-weight: 400;
+            font-size: 13px;
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 14px;
+            &_buy {
+                cursor: pointer;
+                color: #1698D9;
+                border-bottom: 1px dashed #1698D9;
+            }
+            &_active {
+                display: none;
+            }
+        }
+    }
+}
+
+.disable *{
+    cursor:auto;
+    color: hsla(0,0%,70.2%,.5);
+    border-color:#B3B3B3;
+    pointer-events: none;
+}
+.main__box-content_cat.disable {
+    opacity: 0.5;
+}
+.main__box-content_circle.disable {
+    background: #B3B3B3;
+}
+.main__box-title_corner.disable {
+    background: linear-gradient(-45deg,#F2F2F2,#F2F2F2 28px,#B3B3B3 0,#B3B3B3 32px,transparent 0);
+}
+.main__box-subtitle.disable {
+    color: #FFFF66;
+}
+
+
+.main__box-title_corner.active {
+    background: linear-gradient(-45deg,#F2F2F2,#F2F2F2 28px,#D91667 0,#D91667 32px,transparent 0);
+
+    }
+    .main__box-title_txt.active, .main__box-content.active {
+        border-color:#D91667;
+    }
+    .main__box-content_circle.active {
+        background: #D91667;
+    }
+
+    
+.main__box-cart.active {
+    &:hover .main__box-title_corner {
+        background: linear-gradient(-45deg,#F2F2F2,#F2F2F2 28px,#E52E7A 0,#E52E7A 32px,transparent 0);
+    }
+    &:hover .main__box-title_txt {
+        border-color:#E52E7A;
+    }
+    &:hover .main__box-content {
+        border-color:#E52E7A;
+    }
+    &:hover .main__box-content_circle {
+        background: #E52E7A;
+    }
+} 
+.main__box-cart.active {
+    &:hover .main__box-title_corner.active.red {
+        background: linear-gradient(-45deg,#F2F2F2,#F2F2F2 28px,#D91667 0,#D91667 32px,transparent 0);
+    }
+    &:hover .main__box-title_txt.red {
+        border-color:#D91667;
+    }
+    &:hover .main__box-content.red {
+        border-color:#D91667;
+    }
+    &:hover .main__box-content_circle.active.red {
+        background: #D91667;
+    }
+} 

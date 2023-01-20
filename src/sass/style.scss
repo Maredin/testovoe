@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Exo2hin;
+    src: url("../fonts/Exo2.0-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/TrebuchetMS.eot');
+    src: url('../fonts/TrebuchetMS.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TrebuchetMS.woff') format('woff'),
+    url('../fonts/TrebuchetMS.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+* {
+    font-family: 'Exo2hin', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+@import 'blocks/main.scss';
